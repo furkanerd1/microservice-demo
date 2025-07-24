@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f2b4245-a8e4-49ec-8e40-5ef2f6e7761b" name="Changes" comment="Section 2 : Feign Client Error Handling" />
+    <list default="true" id="2f2b4245-a8e4-49ec-8e40-5ef2f6e7761b" name="Changes" comment="Section 2 : Feign Client Error Handling">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/java/com/kitaplik/library_service/controller/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/java/com/kitaplik/library_service/controller/LibraryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/java/com/kitaplik/library_service/service/LibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/java/com/kitaplik/library_service/service/LibraryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/library-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,26 +29,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "furkanerd1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;furkanerd1&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/furkanerd1/microservice-demo.git",
-    "accountId": "771e6f41-27d2-41a6-94aa-1623dc0c85a8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/furkanerd1/microservice-demo.git&quot;,
+    &quot;accountId&quot;: &quot;771e6f41-27d2-41a6-94aa-1623dc0c85a8&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="30E973DJDgYHPGfukgiEqn5YHIy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,6 +66,7 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "Spring Boot.BookServiceApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.GatewayApplication.executor": "Run",
     "Spring Boot.LibraryServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -64,7 +74,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -93,6 +107,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kitaplik.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LibraryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="library-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kitaplik.library_service.LibraryServiceApplication" />
@@ -116,7 +137,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753181694579</updated>
-      <workItem from="1753181698671" duration="4329000" />
+      <workItem from="1753181698671" duration="4525000" />
+      <workItem from="1753268497006" duration="69000" />
+      <workItem from="1753268585080" duration="6244000" />
+      <workItem from="1753364782896" duration="3823000" />
     </task>
     <servers />
   </component>
@@ -137,5 +161,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Section 2 : Feign Client Error Handling" />
     <option name="LAST_COMMIT_MESSAGE" value="Section 2 : Feign Client Error Handling" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

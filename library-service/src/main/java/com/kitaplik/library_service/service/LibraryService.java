@@ -9,6 +9,7 @@ import com.kitaplik.library_service.repository.LibraryRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -51,6 +52,14 @@ public class LibraryService {
         library.getUserBook().add(bookId);
 
         libraryRepository.save(library);
+    }
+
+
+    public List<UUID> getAllLibraries() {
+        return libraryRepository.findAll()
+                .stream()
+                .map(Library::getLibraryId)
+                .collect(Collectors.toList());
     }
 }
 
