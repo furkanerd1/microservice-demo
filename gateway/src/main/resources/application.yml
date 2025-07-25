@@ -3,6 +3,9 @@ spring:
     name: gateway-service
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: book-service
           uri: lb://book-service
@@ -12,11 +15,6 @@ spring:
           uri: lb://library-service
           predicates:
             - Path=/v1/library/**
-      server:
-        webflux:
-          discovery:
-            locator:
-              enabled: true
 
 server:
   port: 8888
@@ -31,11 +29,9 @@ eureka:
   instance:
     prefer-ip-address: true
 
-
 management:
   endpoints:
     web:
       exposure:
-        include: *
+        include: '*'
         exclude: info
-
