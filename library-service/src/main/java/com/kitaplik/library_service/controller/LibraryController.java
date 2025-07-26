@@ -24,7 +24,7 @@ public class LibraryController {
 
     Logger logger = LoggerFactory.getLogger(LibraryController.class);
 
-    @Value("${library.service.count}")
+    @Value("${library-service.book.count}")
     private Integer count;
 
     public LibraryController(LibraryService libraryService, Environment environment) {
