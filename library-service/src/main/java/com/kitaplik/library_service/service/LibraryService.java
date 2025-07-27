@@ -1,11 +1,15 @@
 package com.kitaplik.library_service.service;
 
+import com.kitaplik.bookservice.dto.BookId;
+import com.kitaplik.bookservice.dto.BookServiceGrpc;
+import com.kitaplik.bookservice.dto.Isbn;
 import com.kitaplik.library_service.client.BookServiceClient;
 import com.kitaplik.library_service.exception.LibraryNotFoundException;
 import com.kitaplik.library_service.model.dto.AddBookRequest;
 import com.kitaplik.library_service.model.dto.LibraryDto;
 import com.kitaplik.library_service.model.entity.Library;
 import com.kitaplik.library_service.repository.LibraryRepository;
+import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +22,9 @@ public class LibraryService {
 
     private final LibraryRepository libraryRepository;
     private final BookServiceClient bookServiceClient;
+
+    @GrpcClient("book-service")
+    private BookServiceGrpc.BookServiceBlockingStub bookServiceBlockingStub;
 
 
     public LibraryService(LibraryRepository libraryRepository, BookServiceClient bookServiceClient) {
@@ -45,11 +52,15 @@ public class LibraryService {
     }
 
     public void addBookToLibrary(AddBookRequest request){
-        UUID bookId = bookServiceClient.getBookByIsbn(request.isbn()).getBody().bookId();
+      // feignclient  UUID bookId = bookServiceClient.getBookByIsbn(request.isbn()).getBody().bookId();
+
+        BookId bookIdByIsbn = bookServiceBlockingStub.getBookIdByIsbn(Isbn.newBuilder().setIsbn(request.isbn()).build());
+        String bookId = bookIdByIsbn.getBookId();
+
 
         Library library= libraryRepository.findById(request.id()).orElseThrow(() -> new LibraryNotFoundException("Library could not found by id "+request.id()));
 
-        library.getUserBook().add(bookId);
+        library.getUserBook().add(UUID.fromString(bookId));
 
         libraryRepository.save(library);
     }
